@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="0" method="post">
+     {% csrf_token %}
+   <label>enter the string</label> <input type="text" name="n2"><br>
+    <input type="submit">
+
+</form><br>
+<h1>Entered string is :{{dat}}</h1>
+<br>
+
+<form action="8" method="post">
+     {% csrf_token %}
+   <label>enter the number limit</label> <input type="Number" name="n2"><br>
+    <input type="submit">
+
+</form>
+numbers:
+<h1>{{data}}</h1>
+
+{% for i in data %}
+
+<h3>{{i}}</h3>
+{% endfor %}
+
+
+
+</body>
+</html>

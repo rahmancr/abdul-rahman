@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>how are you</title>
+</head>
+<body>
+<h1>Hello  Welcome my second html Page</h1>
+<h1>how are you</h1>
+<form action="b" method="post">
+    {% csrf_token %}
+    <label>first</label><input type="Number" name="n1"><br><br><br>
+    <label>second</label><input type="Number" name="n2" ><br><br><br>
+     <label>thi rd</label><input type="Number" name="n3"><br><br><br>
+    <input type="submit">
+</form>
+<h1> largest number :{{d}}</h1><br>
+<a href="/b">next</a>
+</body>
+</html>

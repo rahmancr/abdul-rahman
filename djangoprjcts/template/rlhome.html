@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register all</title>
+</head>
+<body>
+<h1>Student details</h1>
+<form action="15" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+<label>Roll no:</label><input type="Number" name="roll"><br><br><br>
+<label>Name:</label><input type="text" name="nam"><br><br><br>
+<label>Age:</label><input type="Number" name="age"><br><br><br>
+<label>Mark:</label><input type="Number" name="mark"><br><br><br>
+<label>username:</label><input type="text" name="usnam"><br><br><br>
+<label>password:</label><input type="text" name="password"><br><br><br>
+    <label>image:</label><input type="file" name="image"><br><br><br>
+<input type="submit"><br>
+</form>
+<h1>{{x}}</h1>
+</body>
+</html>

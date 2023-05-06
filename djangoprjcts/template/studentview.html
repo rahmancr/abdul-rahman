@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>studentview</title>
+    <style>
+        table,th,td{
+        :
+        }
+    </style>
+</head>
+<body>
+
+<h2>Student Details</h2>
+
+
+
+<table border="2">
+    <tr>
+        <th>ROLL NO</th>
+        <th>NAME</th>
+        <th>Age</th>
+        <th>DELETE</th>
+    </tr>
+    {% for i in x %}
+
+    <form action="delete" method="post">
+        {%csrf_token%}
+<tr>
+    <td><input type="text" value="{{i.roll}}" name="roll"></td>
+<td>{{i.name}}</td>
+<td>{{i.age}}</td>
+    <td><input type="submit" value="delete"></td>
+</tr>
+</form>
+ {%endfor%}
+
+
+
+    </table>
+</body>
+</html>

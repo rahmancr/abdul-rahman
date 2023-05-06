@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Current bill</title>
+
+</head>
+<body style="background-image:url({% static 'cr7.jpg'%})">
+<form action="11" method="post">
+    {% csrf_token %}
+<label>costumer id:</label><input type="text" name="id"><br><br><br>
+<label>costumer name:</label><input type="text" name="na"><br><br><br>
+<label>current reading:</label><input type="text" name="cr"><br><br><br>
+<label>old reading:</label><input type="text" name="or"><br><br><br>
+    <input type="submit">
+</form>
+
+    <div style="background-color:green;height:400px;width:500px" >
+<h1>....KSEB....</h1>
+<h1>.....CURRENT BILL.....</h1>
+<h2>costumer id....:  {{data2}}</h2>
+<h2>costumer name..:  {{data3}}</h2>
+<h2>current reading:  {{data4}}</h2>
+<h2>current bill...:  {{data}}</h2>
+        </div>
+<img src="{% static 'cr7.jpg'%}">
+
+
+</body>
+</html>

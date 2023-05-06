@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>prime</title>
+</head>
+<body>
+<form action="7" method="post">
+     {% csrf_token %}
+   <label>Enter the starting number</label> <input type="Number" name="n1"><br>
+    <label>Enter the ending number</label> <input type="Number" name="n2"><br>
+    <input type="submit">
+
+</form>
+{% for i in data %}
+<h3>{{i}}</h3>
+{% endfor %}
+</body>
+</html>

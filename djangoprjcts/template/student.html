@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>student</title>
+</head>
+<body>
+<h1>Student details</h1>
+<form action="13" method="post">
+    {% csrf_token %}
+<!--<label>Roll no:</label><input type="Number" name="roll"><br><br><br>-->
+<!--<label>Name:</label><input type="text" name="nam"><br><br><br>-->
+<!--<label>Age:</label><input type="Number" name="age"><br><br><br>-->
+    <label>enter the roll number to search</label><input type="Number" name="n1">
+<input type="submit"><br>
+<!--    {% for i in y%}-->
+<!--    <input type="Number" value="{{i.roll}}" name="roll"><br>-->
+<!--    <label>name:</label><input type="text" value="{{i.name}}" name="nam"><br>-->
+<!--  <label>age:</label>  <input type="text" value="{{i.age}}" name="age"><br>-->
+<!--    <input type="submit">-->
+<!--    {%endfor%}-->
+<!--    <label>enter the roll to delete</label><input type="text" name="n1  ">-->
+<!--    <button>delete</button>-->
+    </form>
+<br>
+
+<a href="14">
+<button style="background-color:green;border-radius:8px;height:40px;width:110px;transition-duration:0.4s;transition:all 0.8s;" >to view details</button>
+    </a><br><br><br><br>
+{% for i in y%}
+<form method="post" action="update">
+    {% csrf_token %}
+
+<input type="text" value="{{i.roll}}" name="roll" hidden>
+<input type="text" value="{{i.name}}" name="nam">
+<input type="text" value="{{i.age}}" name="age">
+    <input type="submit" value="Update">
+</form>
+{%endfor%}
+<h1>{{u}}</h1>
+</body>
+</html>

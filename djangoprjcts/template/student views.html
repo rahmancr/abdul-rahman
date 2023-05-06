@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>views</title>
+</head>
+<body>
+<!--<form method="post" action="14">-->
+<!--    {% csrf_token %}-->
+{% for i in x %}
+<h1>{{i.name}}</h1>
+<h1>{{i.age}}</h1>
+<img src="{{i.image.url}}"><br>
+<h2>...........................</h2>
+{%endfor%}
+<!--</form>-->
+</body>
+</html>
